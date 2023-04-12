@@ -202,7 +202,7 @@ header nav .form i{
 .landing {
     min-height: 100vh;
     background-color: var(--main-color);
-    background-image: url(/mona/web/projects/template2/images/waiting-for-inspiration_3840x2160.jpg);
+    background-image: url(/home/mona/MyProjects/template_two/images/waiting-for-inspiration_3840x2160.jpg);
     background-size: cover;
     position: relative;
 }
