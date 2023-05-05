@@ -1218,6 +1218,7 @@ header nav .form i{
 /* start footer  */
 footer {
     background-image: url(../images/space.avif);
+    -webkit-background-image: url(../images/space.avif) ;
     background-color: #777;
     height: 50vh;
     position: relative;
