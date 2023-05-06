@@ -1115,26 +1115,20 @@ header nav .form i{
     background-image: url(../images/GERBERA-3840×2160-copy-3bijkubk90laf5hgeo38xs.jpg);
     background-size: cover;
     height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: flex-end; */
     margin-bottom: var(--section-padding);
+    position: relative;
 }
 .contact-section .contact-image .container{
     display: flex;
     justify-content: space-between;
-    height: 25%;
-}
-@media (max-width: 1050px){
-    .contact-section .contact-image .container{
-        flex-direction: column;
-    }
-}
-@media (max-width: 767px){
-    .contact-section .contact-image form  {
-        /* width: 50%; */
-        display: flex;
-    }
+    /* height: 25%; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .contact-section .contact-image .container form{
     flex: 1;
@@ -1164,68 +1158,88 @@ header nav .form i{
     flex: 1;
     color: white;
 }
+@media (max-width: 1050px){
+    .contact-section .contact-image .container{
+        flex-direction: column;
+        transform: translate(-50%, -50%);
+    }
+} 
+ @media (max-width: 768px){
+    .contact-section .contact-image .container{
+        width: 80%;
+    }
+    .contact-section .contact-image .container form {
+        display: flex;
+    }
+    .contact-section .contact-image .container .text  {
+        font-size: 14px;
+    }
+    .contact-section .contact-image .container form button{
+        font-size: 14px;
+
+    }
+} 
 /* end contact image  */
 /* start contact us  */
 .contact-section .container .your-info{
     display: flex;
-    flex-direction: column;
-    align-items:stretch;
+    justify-content: space-evenly;
+    margin-top: 100px;
 }
-.contact-section .container .your-info .name  {
-    display: flex;
-    justify-content: space-around;
-}
-.contact-section .container .your-info .mail{
-    margin-top: -50px;
-}
-.contact-section .container .your-info .name .touch{
+.contact-section .container .your-info .input{
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    flex-basis: 80%;
+}
+.contact-section .container .your-info .input input{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    outline: none;
+}
+.contact-section .container .your-info .input input::placeholder{
+    color: black;
+    font-size: 14px;
+}
+#message{
+    height: 150px;
+}
+#message::placeholder{
+    top: 15px;
+    position: absolute;
+    font-size: 14px;
+}
+.contact-section .container .our-info {
     text-align: left;
 }
-.contact-section .container .your-info .name .none {
-    color: transparent;
-}
-.contact-section .container .your-info input{
-    width: 80%;
-    height: 50px;
-    padding-left: 10px;
-    outline: none;
-}
-.contact-section .container .your-info input::placeholder{
-    color: black;
-}
-.contact-section .container .your-info textarea{
-    outline: none;
-    width: 80%;
-    padding-left: 10px;
-    padding-top: 10px;
-}
-.contact-section .container .your-info textarea::placeholder{
-    color: black;
-}
-.contact-section .container .your-info .message{
-    margin-top: -30px;
-}
-.contact-section .container .your-info .message .city,
-.contact-section .container .your-info .name .touch .phone {
-    font-size: 14px;
+.contact-section .container .our-info .phone p, .address p{
     line-height: 2;
     color: #A8A8A8;
+    font-size: 14px;
+}
+.contact-section .container .our-info .phone h4, .address h4{
+    margin-bottom: 15px;
+    font-weight: 200;
 }
 .contact-section .container .send{
     margin-top: 30px;
 }
+@media (max-width: 993px){
+    #message::placeholder{
+        font-size: 12px;
+    }
+    .contact-section .container .our-info .phone p, .address p{
+        font-size: 12px;
+    }
+    .contact-section .container .our-info .phone h4, .address h4{
+        font-size: 14px;
+    }
+}
 @media (max-width: 767px){
-    .contact-section .container .your-info .name{
-        flex-direction: column-reverse;   
-    }
-    .contact-section .container .your-info .mail{
-        margin-top: -80px;
-    }
-    .contact-section .container .your-info .message{
-        margin-top: 50px;
-    }
+   .contact-section .container .your-info{
+    flex-direction: column-reverse;
+   }
 }
 /* end contact us  */
 /* end contact section  */
